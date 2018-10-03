@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+
+\usepackage[lmargin=2.5cm, rmargin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+
+%% metadata
+\newcommand{\abstracttitle}{Very Long Title Describing Exactly Everything Anybody Would Want to Know so it Actually Tells in Less Detail the Things Elaborated Down Below}
+
+\newcommand{\pathtobib}{bibliography.bib}%../../path/to/bibliography.bib}
+
+\newcommand{\authorA}{Firstname Lastname}
+\newcommand{\addressA}{Institute name, might be very long; University of Employment}
+\newcommand{\mailA}{firstname.lastname@institute.example.org}
+
+\newcommand{\authorB}{John Doe}
+\newcommand{\addressB}{Institute name, might be very long; University of Employment}
+\newcommand{\mailB}{john.doe@institute.example.org}
+
+
+\newcommand{\makeauthors}{%
+\begin{center}
+	\huge \abstracttitle \\ 	
+	\hspace{10pt}
+%% uncomment this for 2 column layout authors (up to 2 currently)
+	\begin{multicols}{2}
+		\begin{center}
+			\Large \underline{\authorA} \\
+			\large \addressA \\
+			\mailA
+		\end{center}
+		\begin{center}
+			\Large \authorB \\
+			\large \addressB \\
+			\mailB
+		\end{center}
+	\end{multicols}
+	
+
+%% uncomment this for more classical list of authors with short refs
+%\large
+%\underline{\authorA}$^1$, \authorB$^2$ \\
+%
+%\hspace{10pt}
+%
+%\small  
+%$^1$) \mailA\\
+%\addressA\\
+%$^2$) \mailB\\
+%\addressB\\
+
+\hspace{10pt}
+\end{center}%
+}
+
+
+% uncomment this for pure biblatex
+% bug(?): this is not UTF-8 when you view the PDF metadata, beware
+\usepackage[
+	unicode=true,
+	pdftitle={\abstracttitle},
+	pdfsubject={Short Summary of What This is About},
+	pdfauthor={\authorA},
+	pdfkeywords={very, descriptive, actually fitting, keywords, not, clickbait}
+]{hyperref}
+
+%% uncomment following 2 packages for biber
+%% don't forget the end of the main .tex file and makefile
+%\usepackage[autostyle]{csquotes}
+%\usepackage[
+%backend=biber,
+%style=authoryear,
+%sortlocale=de_DE,
+%natbib=false,
+%url=false, 
+%doi=true,
+%eprint=false
+%]{biblatex}
+%\addbibresource{\pathtobib}
+
+
